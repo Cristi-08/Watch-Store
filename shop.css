@@ -23,12 +23,15 @@ body {
   gap: 8px;
   background-color: #cccccc;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
+  height: 500px;
+  width: 300px;
 }
 
 .shop_watch-card img {
   width: 250px;
   height: auto;
+  padding-bottom: 30px;
 }
 
 .watch-image {

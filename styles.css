@@ -1,0 +1,275 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top : 45px;
+}
+/* Header and Navigation */
+header {
+    background-color: #333;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;         
+    top: 0;                    
+    left: 0;
+    width: 100%;               
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Ensure space between menu items */
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    flex: 1; /* Each list item takes equal space */
+    text-align: center; /* Center the text inside each list item */
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #c0af9f;
+    font-weight: bold;
+    transition-duration: 0.7s;
+}
+
+/* Main Content */
+.introduction {
+    text-align: center;
+    background-color: #c0af9f;
+    padding: 50px 0;
+    color: white;
+}
+
+.featured-watches {
+    color: #463527;
+    padding: 30px;
+}
+
+.watches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.watch-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 0;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.watch-card img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    transition: transform 2s ease;
+}
+
+.watch-card a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #333;
+    overflow: hidden;
+}
+
+footer {
+    background-color: #c0af9f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-text {
+    padding: 12px;
+}
+
+.menu {
+    background-color: #c0af9f;
+}
+
+.watch-card img:hover {
+    transform: scale(1.05);
+    transition-duration: 2.5s;
+}
+
+.featured-watches h2 {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+
+.watches-grid button {
+    border-radius: 25px;
+    border: none;    
+}
+
+.watches-grid button :hover{
+    border: none;    
+    cursor: pointer;
+}
+
+.watch-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.watch-card-link h3,
+.watch-card-link p {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Featured Gallery Section */
+.featured-gallery {
+    background-color: #111;
+    color: #fff;
+    padding: 110px 0;
+    text-align: center;
+}
+
+.featured-gallery h2 {
+    font-size: 32px;
+    margin-bottom: 75px;
+    color: #c0af9f;
+    letter-spacing: 2px;
+}
+
+/* Gallery Grid Layout */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 0 40px;
+}
+
+/* Each Gallery Item */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.5s ease;
+}
+
+/* Default and Hover Images */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: opacity 0.6s ease, transform 0.8s ease;
+}
+
+/* Hover transition between images */
+.gallery-item .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.gallery-item:hover .default-img {
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+.gallery-item:hover .hover-img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Lift effect on hover */
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(192, 175, 159, 0.3);
+}
+
+header {
+    background-color: #333;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    flex: 1;
+    text-align: center;
+  }
+  
+  nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: white;
+    color: #c0af9f;
+    font-weight: bold;
+    transition-duration: 0.7s;
+  }
+
+  .about-container {
+    justify-content: center;
+    text-align: center;
+    padding: 45px 350px 50px 350px;
+  }
+  
+  .about-container h1 {
+    font-size: 2.5rem;
+    color: #c0af9f;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+  }
+  
+  .about-container p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #463527;
+  }
+  
+  em {
+    color: #c0af9f;
+    font-style: italic;
+    font-size: 20px;
+  }

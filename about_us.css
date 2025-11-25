@@ -1,82 +1,190 @@
 * {
-    margin: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  .menu {
-    background-color: #c0af9f;
-  }
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  header {
-    background-color: #333;
-    padding: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav li {
-    flex: 1;
-    text-align: center;
-  }
-  
-  nav a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 15px 0;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  nav a:hover {
-    background-color: white;
-    color: #c0af9f;
-    font-weight: bold;
-    transition-duration: 0.7s;
-  }
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding-top: 45px; /* space for fixed header */
+}
 
-  .about-container {
-    justify-content: center;
-    text-align: center;
-    padding: 25px 350px 0 350px;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    color: #c0af9f;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-  }
-  
-  .about-container p {
-    font-size: 1.4rem;
-    line-height: 1.6;
-    margin-bottom: 16px;
-    color: #463527;
-  }
-  
-  em {
-    color: #c0af9f;
-    font-style: italic;
-    font-size: 20px;
-  }
+/* Smooth transitions */
+body,
+header,
+.menu,
+nav,
+.about-container,
+footer {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
+}
 
-  footer {
-    margin-top: 352px;
-    background-color: #c0af9f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
+/* Header strip behind nav */
+.menu {
+  background-color: #c0af9f;
+}
+
+/* Header bar */
+header {
+  background-color: #333;
+  padding: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* NAV + THEME BUTTON */
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* nav links (4 items) */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: white;
+  color: #c0af9f;
+  font-weight: bold;
+  transition-duration: 0.7s;
+}
+
+/* Theme toggle button (~5% width) */
+.theme-toggle {
+  flex: 0 0 5%;
+  max-width: 120px;
+  min-width: 60px;
+  margin-left: 10px;
+  padding: 8px 0;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: white;
+  color: #c0af9f;
+  border-color: white;
+}
+
+/* Content */
+.about-container {
+  justify-content: center;
+  text-align: center;
+  padding: 125px 350px 0 350px;
+}
+
+.about-container h1 {
+  font-size: 2.5rem;
+  color: #c0af9f;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.about-container p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #463527;
+}
+
+em {
+  color: #c0af9f;
+  font-style: italic;
+  font-size: 20px;
+}
+
+footer {
+  margin-top: 352px;
+  background-color: #c0af9f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* =============== DARK MODE =============== */
+
+body.dark-theme {
+  background-color: #111;
+  color: #f4f4f4;
+}
+
+/* header/nav */
+body.dark-theme .menu,
+body.dark-theme header,
+body.dark-theme nav {
+  background-color: #111;
+}
+
+/* nav links */
+body.dark-theme nav a {
+  color: #c0af9f;
+}
+
+body.dark-theme nav a:hover {
+  background-color: #c0af9f;
+  color: #111;
+}
+
+/* toggle */
+body.dark-theme .theme-toggle {
+  border-color: #c0af9f;
+  color: #c0af9f;
+}
+
+body.dark-theme .theme-toggle:hover {
+  background-color: #c0af9f;
+  color: #111;
+}
+
+/* content colors */
+body.dark-theme .about-container h1 {
+  color: #c0af9f;
+}
+
+body.dark-theme .about-container p {
+  color: #f4f4f4;
+}
+
+/* footer */
+body.dark-theme footer {
+  background-color: #c0af9f;
+  color: #000;
+}

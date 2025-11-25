@@ -33,7 +33,6 @@ nav ul {
 }
 
 nav li {
-    flex: 1; /* Each list item takes equal space */
     text-align: center; /* Center the text inside each list item */
 }
 

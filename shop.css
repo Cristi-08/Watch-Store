@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  padding-top: 45px; /* space for fixed header */
+}
+
+/* Smooth transitions */
+body,
+header,
+.menu,
+nav,
+.shop-intro,
+.gallery,
+.shop_watch-card,
+footer {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+/* Header strip */
+.menu {
+  background-color: #c0af9f;
+}
+
+/* Header bar */
+header {
+  background-color: #333;
+  padding: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* NAV + THEME BUTTON */
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: white;
+  color: #c0af9f;
+  font-weight: bold;
+  transition-duration: 0.7s;
+}
+
+/* Theme toggle (~5%) */
+.theme-toggle {
+  flex: 0 0 5%;
+  max-width: 120px;
+  min-width: 60px;
+  margin-left: 10px;
+  padding: 8px 0;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: white;
+  color: #c0af9f;
+  border-color: white;
+}
+
+/* Intro */
+.shop-intro {
+  padding: 40px 50px 20px 50px;
+}
+
+.shop-intro h1 {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  color: #c0af9f;
+}
+
+.shop-intro p {
+  font-size: 1rem;
+  max-width: 600px;
+  color: #555;
+}
+
+/* Gallery */
+.gallery {
+  background-color: #fdfdfb;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 20px 60px 20px;
+}
+
+/* Cards */
+.shop_watch-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background-color: #f4ede7e2;
+  padding: 20px;
+  border-radius: 10px;
+  height: 470px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.watch-img {
+  width: auto;
+  height: 325px;
+  padding-bottom: 30px;
+  object-fit: contain;
+}
+
+.model {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.description {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.details {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #c0af9f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* =============== DARK MODE =============== */
+
+body.dark-theme {
+  background-color: #111;
+  color: #f4f4f4;
+}
+
+/* header/nav */
+body.dark-theme .menu,
+body.dark-theme header,
+body.dark-theme nav {
+  background-color: #111;
+}
+
+body.dark-theme nav a {
+  color: #c0af9f;
+}
+
+body.dark-theme nav a:hover {
+  background-color: #c0af9f;
+  color: #111;
+}
+
+/* toggle */
+body.dark-theme .theme-toggle {
+  border-color: #c0af9f;
+  color: #c0af9f;
+}
+
+body.dark-theme .theme-toggle:hover {
+  background-color: #c0af9f;
+  color: #111;
+}
+
+/* gallery/cards */
+body.dark-theme .gallery {
+  background-color: #000;
+}
+
+body.dark-theme .shop_watch-card {
+  background-color: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme .description {
+  color: #ddd;
+}
+
+body.dark-theme .details {
+  color: #bbb;
+}
+
+/* footer */
+body.dark-theme footer {
+  background-color: #c0af9f;
+  color: #000;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav ul {
+    order: 1;
+  }
+
+  .theme-toggle {
+    order: 0;
+    align-self: flex-end;
+    margin: 5px 10px 5px 0;
+    flex: 0 0 auto;
+  }
+
+  .shop-intro {
+    padding: 30px 20px 10px 20px;
+  }
+}

@@ -10,47 +10,102 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    padding-top : 45px;
+    padding-top: 45px; /* space for fixed header */
 }
+
+/* Smooth transitions when theme changes */
+body,
+header,
+.menu,
+.introduction,
+.featured-watches,
+.watch-card,
+.featured-gallery,
+.about-container,
+footer {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 /* Header and Navigation */
 header {
     background-color: #333;
     padding: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;         
-    top: 0;                    
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;               
+    width: 100%;
     z-index: 1000;
 }
 
-nav ul {
+/* Colored strip for header */
+.menu {
+    background-color: #c0af9f;
+}
+
+/* Nav container: UL + button */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+/* UL takes remaining width */
+.nav-bar ul {
     list-style-type: none;
-    display: flex; /* Use Flexbox */
-    justify-content: space-between; /* Ensure space between menu items */
+    display: flex;
+    flex: 1 1 auto;        /* takes all available space */
     padding: 0;
     margin: 0;
 }
 
-nav li {
-    flex: 1; /* Each list item takes equal space */
-    text-align: center; /* Center the text inside each list item */
+/* 4 links share UL equally */
+.nav-bar li {
+    flex: 1 1 0;
+    text-align: center;
 }
 
-nav a {
+/* Links */
+.nav-bar a {
     display: block;
     color: white;
     text-decoration: none;
     padding: 15px 0;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    font-weight: 400; /* normal by default */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover {
+/* Hover: normal -> bold, no layout jump thanks to fixed li width */
+.nav-bar a:hover {
     background-color: white;
     color: #c0af9f;
     font-weight: bold;
     transition-duration: 0.7s;
+}
+
+/* Theme button: ~5% of nav width */
+.theme-toggle {
+    flex: 0 0 5%;          /* about 5% width */
+    max-width: 120px;
+    min-width: 60px;
+    margin-left: 10px;
+    padding: 8px 0;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: white;
+    color: #c0af9f;
+    border-color: white;
 }
 
 /* Main Content */
@@ -66,6 +121,13 @@ nav a:hover {
     padding: 30px;
 }
 
+.featured-watches h2 {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+
+/* Watches Grid */
 .watches-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -91,6 +153,11 @@ nav a:hover {
     transition: transform 2s ease;
 }
 
+.watch-card img:hover {
+    transform: scale(1.05);
+    transition-duration: 2.5s;
+}
+
 .watch-card a {
     margin-top: 10px;
     text-decoration: none;
@@ -98,40 +165,8 @@ nav a:hover {
     overflow: hidden;
 }
 
-footer {
-    background-color: #c0af9f;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
 .card-text {
     padding: 12px;
-}
-
-.menu {
-    background-color: #c0af9f;
-}
-
-.watch-card img:hover {
-    transform: scale(1.05);
-    transition-duration: 2.5s;
-}
-
-.featured-watches h2 {
-    padding-top: 10px;
-    padding-bottom: 15px;
-    font-size: 30px;
-}
-
-.watches-grid button {
-    border-radius: 25px;
-    border: none;    
-}
-
-.watches-grid button :hover{
-    border: none;    
-    cursor: pointer;
 }
 
 .watch-card-link {
@@ -213,63 +248,155 @@ footer {
     box-shadow: 0 10px 20px rgba(192, 175, 159, 0.3);
 }
 
-header {
-    background-color: #333;
-    padding: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav li {
-    flex: 1;
-    text-align: center;
-  }
-  
-  nav a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 15px 0;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  nav a:hover {
-    background-color: white;
-    color: #c0af9f;
-    font-weight: bold;
-    transition-duration: 0.7s;
-  }
-
-  .about-container {
+/* About Section */
+.about-container {
     justify-content: center;
     text-align: center;
     padding: 45px 350px 50px 350px;
-  }
-  
-  .about-container h1 {
+}
+
+.about-container h1 {
     font-size: 2.5rem;
     color: #c0af9f;
     margin-bottom: 25px;
     letter-spacing: 1px;
-  }
-  
-  .about-container p {
+}
+
+.about-container p {
     font-size: 1.4rem;
     line-height: 1.6;
     margin-bottom: 16px;
     color: #463527;
-  }
-  
-  em {
+}
+
+em {
     color: #c0af9f;
     font-style: italic;
     font-size: 20px;
-  }
+}
+
+/* Footer */
+footer {
+    background-color: #c0af9f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ========================= */
+/*        DARK THEME         */
+/* ========================= */
+
+body.dark-theme {
+    background-color: #111;
+    color: #f4f4f4;
+}
+
+/* Header & nav in dark mode */
+body.dark-theme header,
+body.dark-theme .menu {
+    background-color: #111;
+}
+
+body.dark-theme .nav-bar a {
+    color: #c0af9f;
+}
+
+body.dark-theme .nav-bar a:hover {
+    background-color: #c0af9f;
+    color: #111;
+}
+
+/* Theme button in dark mode */
+body.dark-theme .theme-toggle {
+    border-color: #c0af9f;
+    color: #c0af9f;
+}
+
+body.dark-theme .theme-toggle:hover {
+    background-color: #c0af9f;
+    color: #111;
+}
+
+/* Sections in dark mode */
+body.dark-theme .introduction {
+    background-color: #111;
+    color: #f4f4f4;
+}
+
+body.dark-theme .featured-watches {
+    background-color: #c0af9f;
+    color: #f4f4f4;
+}
+
+body.dark-theme .featured-watches h2 {
+    color: #463527;
+}
+
+body.dark-theme .featured-watches h3 {
+    color: #c0af9f;
+}
+
+body.dark-theme .introduction h1{
+    color: #c0af9f;
+}
+
+body.dark-theme .watch-card {
+    background-color: #222;
+    border-color: #555;
+}
+
+body.dark-theme .featured-gallery {
+    background-color: #111;
+    color: #f4f4f4;
+}
+
+body.dark-theme .featured-gallery h2 {
+    color: #c0af9f;
+}
+
+body.dark-theme .about-container p {
+    color: #f4f4f4;
+}
+
+body.dark-theme footer {
+    background-color: #c0af9f;
+    color: #000;
+}
+
+/* Simple responsiveness */
+@media (max-width: 900px) {
+    .about-container {
+        padding: 40px 40px 50px 40px;
+    }
+
+    .watches-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-bar ul {
+        order: 1;
+    }
+
+    .theme-toggle {
+        order: 0;
+        align-self: flex-end;
+        margin: 5px 10px 5px 0;
+        flex: 0 0 auto;
+    }
+
+    .watches-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        padding: 30px 20px 40px 20px;
+    }
+}

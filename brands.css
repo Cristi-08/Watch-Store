@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Base body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #463527;
+  padding-top: 45px; /* space for fixed header */
+}
+
+/* Smooth transitions */
+body,
+header,
+.menu,
+nav,
+.img_container,
+.info,
+.shop-intro,
+.gallery,
+.shop_watch-card,
+.view-all-btn,
+footer {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+/* Top strip behind nav */
+.menu {
+  background-color: #c0af9f;
+}
+
+/* Header bar */
+header {
+  background-color: #333;
+  padding: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* NAV + THEME BUTTON */
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: white;
+  color: #c0af9f;
+  font-weight: bold;
+  transition-duration: 0.7s;
+}
+
+/* Theme toggle button (~5% width) */
+.theme-toggle {
+  flex: 0 0 5%;
+  max-width: 120px;
+  min-width: 60px;
+  margin-left: 10px;
+  padding: 8px 0;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: white;
+  color: #c0af9f;
+  border-color: white;
+}
+
+/* Banner image container */
+.img_container {
+  background-color: #c0af9f;
+}
+
+.img_container img {
+  width: 100%;
+  height: 30vw;
+  object-fit: cover;
+  filter: brightness(.75);
+  margin: 0;
+}
+
+/* Brand info section */
+.info {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  text-indent: 70px;
+  padding: 70px 700px 50px 100px; /* extra top padding to clear fixed header */
+  color: #463527;
+  margin-bottom: 20px;
+}
+
+.info h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  padding-bottom: 40px;
+  color: #c0af9f;
+}
+
+/* Popular models header row */
+.shop-intro {
+  padding: 50px 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.shop-intro h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: #c0af9f;
+}
+
+/* View All button */
+.view-all-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #463527;
+  background-color: transparent;
+  color: #463527;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #463527;
+  color: #ffffff;
+  border-color: #463527;
+}
+
+/* Gallery of models */
+.gallery {
+  background-color: #fdfdfb;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+/* Card for each watch */
+.shop_watch-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background-color: #f4ede7e2;
+  padding: 20px;
+  border-radius: 10px;
+  height: 400px;
+  width: 300px;
+}
+
+.shop_watch-card img {
+  width: auto;
+  height: 325px;
+  padding-bottom: 30px;
+}
+
+.watch-image {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: contain;
+}
+
+/* Footer */
+footer {
+  background-color: #c0af9f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===================== DARK THEME ===================== */
+
+body.dark-theme {
+  background-color: #000;
+  color: #f4f4f4;
+}
+
+/* Header strip & nav */
+body.dark-theme .menu,
+body.dark-theme header,
+body.dark-theme nav {
+  background-color: #111;
+}
+
+body.dark-theme nav a {
+  color: #c0af9f;
+}
+
+body.dark-theme nav a:hover {
+  background-color: #c0af9f;
+  color: #111;
+}
+
+/* Theme button */
+body.dark-theme .theme-toggle {
+  border-color: #c0af9f;
+  color: #c0af9f;
+}
+
+body.dark-theme .theme-toggle:hover {
+  background-color: #c0af9f;
+  color: #111;
+}
+
+/* Banner */
+body.dark-theme .img_container {
+  background-color: #111;
+}
+
+body.dark-theme .img_container img {
+  filter: brightness(0.5);
+}
+
+/* Info section */
+body.dark-theme .info {
+  color: #f4f4f4;
+  background-color: #111;
+}
+
+body.dark-theme .info h1 {
+  color: #c0af9f;
+}
+
+body.dark-theme .shop-intro {
+    background-color: #111;
+}
+/* Popular models section */
+body.dark-theme .shop-intro h1 {
+  color: #c0af9f;
+  background-color: #111;
+}
+
+/* View All in dark */
+body.dark-theme .view-all-btn {
+  border-color: #c0af9f;
+  color: #c0af9f;
+}
+
+body.dark-theme .view-all-btn:hover {
+  background-color: #c0af9f;
+  color: #111;
+}
+
+/* Gallery + cards */
+body.dark-theme .gallery {
+  background-color: #000;
+}
+
+body.dark-theme .shop_watch-card {
+  background-color: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer */
+body.dark-theme footer {
+  background-color: #c0af9f;
+  color: #000;
+}

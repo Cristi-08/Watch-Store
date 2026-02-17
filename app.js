@@ -30,8 +30,15 @@ async function loadContent() {
       ...(content?.images || {}) // keep old format working
     };
 
+    const mergedPlaceholders = {
+      ...(content?.global?.placeholders || {}),
+      ...(content?.pages?.[pageKey]?.placeholders || {}),
+      ...(content?.placeholders || {}) // keep old format working
+    };
+
     applyText(mergedText);
     applyImages(mergedImages);
+    applyPlaceholders(mergedPlaceholders);
   } catch (err) {
     console.warn("Content JSON not applied:", err);
   }
@@ -74,6 +81,19 @@ function applyImages(imageMap) {
     if (cfg && typeof cfg === "object") {
       if (typeof cfg.src === "string") el.src = cfg.src;
       if (typeof cfg.alt === "string") el.alt = cfg.alt;
+    }
+  }
+}
+
+function applyPlaceholders(placeholderMap) {
+  if (!placeholderMap || typeof placeholderMap !== "object") return;
+
+  for (const [id, value] of Object.entries(placeholderMap)) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    // Support input and textarea elements
+    if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) {
+      el.placeholder = String(value);
     }
   }
 }

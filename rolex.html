@@ -25,31 +25,31 @@
 
     <div class="banner">
         <div class="img_container">
-            <img src="images/rolex.jpg" alt="Rolex Banner">
+            <img id="bannerImg" src="images/rolex.jpg" alt="Rolex Banner">
         </div>
     </div>
 
     <div class="info">
-      <h1>INFO</h1>
+      <h1 id="infoTitle">INFO</h1>
       
-      <p><b>Rolex</b> is a prestigious Swiss watchmaker and one of the most recognized names in luxury timepieces. Founded in <b>1905</b> 
+      <p id="infoP1"><b>Rolex</b> is a prestigious Swiss watchmaker and one of the most recognized names in luxury timepieces. Founded in <b>1905</b> 
       in London by Hans Wilsdorf and Alfred Davis as Wilsdorf and Davis, the company moved to Geneva in <b>1919</b>. Today, it 
       remains privately owned by the Hans Wilsdorf Foundation, which reinvests profits into the brand and charitable initiatives.</p>
       
-      <p>Rolex is known for innovation and timeless design. It introduced several landmark models: the <b>Datejust (1945)</b>, the 
+      <p id="infoP2">Rolex is known for innovation and timeless design. It introduced several landmark models: the <b>Datejust (1945)</b>, the 
       first watch with an automatic date change; the <b>Submariner (1953)</b>, a pioneering diving watch; and the <b>GMT-Master (1955)</b>, 
       designed for pilots tracking multiple time zones. Other iconic models include the <b>Daytona</b> for motorsports, the <b>Explorer</b> 
       for adventurers, the <b>Sky-Dweller</b>, with dual time and an annual calendar, and the newly introduced <b>Land-Dweller (2025)</b>, 
       which features a high-frequency movement, integrated bracelet, and advanced escapement technology.</p>
         
-      <p>Each Rolex is hand-assembled with strict quality control. The company even operates its own gold foundry, ensuring 
+      <p id="infoP3">Each Rolex is hand-assembled with strict quality control. The company even operates its own gold foundry, ensuring 
       material excellence. This meticulous craftsmanship and long-lasting value make Rolex a global symbol of reliability, 
       luxury, and status.</p>
     </div>
 
     <div class="shop-intro">
-        <h1>Popular models</h1>
-        <a href="shop.html" class="view-all-btn">View All</a>
+        <h1 id="popularModelsTitle">Popular models</h1>
+        <a id="viewAllBtn" href="shop.html" class="view-all-btn">View All</a>
     </div>
 
     <div class="gallery">
@@ -80,7 +80,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 TIMELESS watches | All Rights Reserved</p>
+        <p id="footerText">&copy; 2025 TIMELESS watches | All Rights Reserved</p>
     </footer>
 
     <!-- Theme Toggle Script -->
@@ -101,5 +101,8 @@
             localStorage.setItem("theme", isDark ? "dark" : "light");
         });
     </script>
+
+    <!-- Content-from-JSON Script -->
+    <script src="app.js" defer></script>
 </body>
 </html>

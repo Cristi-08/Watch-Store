@@ -28,8 +28,8 @@
   <main>
     <!-- Intro -->
     <section class="shop-intro">
-      <h1>Explore Our Collection</h1>
-      <p>Discover a curated selection of iconic timepieces from the world’s finest watchmakers.</p>
+      <h1 id="shopIntroTitle">Explore Our Collection</h1>
+      <p id="shopIntroSubtitle">Discover a curated selection of iconic timepieces from the world’s finest watchmakers.</p>
     </section>
 
     <!-- Gallery -->
@@ -144,7 +144,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 TIMELESS watches | All Rights Reserved</p>
+    <p id="footerText">&copy; 2025 TIMELESS watches | All Rights Reserved</p>
   </footer>
 
   <!-- Theme Toggle Script -->
@@ -166,6 +166,9 @@
       localStorage.setItem("theme", isDark ? "dark" : "light");
     });
   </script>
+
+  <!-- Content-from-JSON Script -->
+  <script src="app.js" defer></script>
 
 </body>
 </html>

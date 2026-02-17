@@ -25,24 +25,24 @@
 
     <div class="banner">
         <div class="img_container">
-            <img src="images/ap_banner.jpg" alt="AP Banner">
+            <img id="bannerImg" src="images/ap_banner.jpg" alt="AP Banner">
         </div>
     </div>
 
     <div class="info">
-      <h1>INFO</h1>
+      <h1 id="infoTitle">INFO</h1>
       
-      <p><b>Audemars Piguet</b> is a distinguished Swiss watchmaker renowned for blending tradition with bold innovation. 
+      <p id="infoP1"><b>Audemars Piguet</b> is a distinguished Swiss watchmaker renowned for blending tradition with bold innovation. 
       Founded in <b>1875</b> in Le Brassus, Switzerland, by Jules Louis Audemars and Edward Auguste Piguet, the company 
       has remained family-owned, upholding its founding values of independence and horological excellence.</p>
 
-      <p>AP is best known for revolutionizing the luxury watch market with the introduction of the <b>Royal Oak</b> in 
+      <p id="infoP2">AP is best known for revolutionizing the luxury watch market with the introduction of the <b>Royal Oak</b> in 
       <b>1972</b>, designed by Gérald Genta. It was the first high-end sports watch made of stainless steel, recognized 
       for its distinctive octagonal bezel and integrated bracelet. The success of the Royal Oak led to further innovations 
       such as the <b>Royal Oak Offshore</b>, a more robust and sportier variation introduced in 1993, and the 
       <b>Royal Oak Concept</b> series, showcasing cutting-edge materials and futuristic designs.</p>
 
-      <p>Audemars Piguet is also respected for its expertise in high complications, including <b>tourbillons</b>, 
+      <p id="infoP3">Audemars Piguet is also respected for its expertise in high complications, including <b>tourbillons</b>, 
       <b>minute repeaters</b>, and <b>perpetual calendars</b>. Each timepiece reflects a balance of technical mastery 
       and avant-garde design. With a strong focus on in-house production and finishing, AP watches are crafted with 
       meticulous care, combining bold aesthetics with mechanical brilliance. This dedication has secured Audemars Piguet 
@@ -50,8 +50,8 @@
     </div>
 
     <div class="shop-intro">
-        <h1>Popular models</h1>
-        <a href="shop.html" class="view-all-btn">View All</a>
+        <h1 id="popularModelsTitle">Popular models</h1>
+        <a id="viewAllBtn" href="shop.html" class="view-all-btn">View All</a>
     </div>
 
     <div class="gallery">
@@ -82,7 +82,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 TIMELESS watches | All Rights Reserved</p>
+        <p id="footerText">&copy; 2025 TIMELESS watches | All Rights Reserved</p>
     </footer>
 
     <!-- Theme Toggle Script -->
@@ -103,5 +103,8 @@
             localStorage.setItem("theme", isDark ? "dark" : "light");
         });
     </script>
+
+    <!-- Content-from-JSON Script -->
+    <script src="app.js" defer></script>
 </body>
 </html>

@@ -24,26 +24,26 @@
 
     <div class="wrapper">
       <div class="contact-container">
-        <h1>Contact Us</h1>
-        <p>If you have any questions about our collection or need assistance, we’re here to help. Reach out to us using the form below or through our contact details.</p>
+        <h1 id="contactTitle">Contact Us</h1>
+        <p id="contactSubtitle">If you have any questions about our collection or need assistance, we’re here to help. Reach out to us using the form below or through our contact details.</p>
         
         <form class="contact-form">
           <input type="text" placeholder="Your Name" required>
           <input type="email" placeholder="Your Email" required>
           <textarea placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
+          <button id="contactSubmitBtn" type="submit">Send Message</button>
         </form>
 
         <div class="contact-info">
-          <p>Email: support@timelesswatches.com</p>
-          <p>Phone: +1 (800) 555-0199</p>
-          <p>Instagram: <a href="#">@timelesswatches</a></p>
+          <p id="contactEmail">Email: support@timelesswatches.com</p>
+          <p id="contactPhone">Phone: +1 (800) 555-0199</p>
+          <p id="contactInstagram">Instagram: <a href="#">@timelesswatches</a></p>
         </div>
       </div>
     </div>
 
     <footer>
-      <p>&copy; 2025 TIMELESS watches | All Rights Reserved</p>
+      <p id="footerText">&copy; 2025 TIMELESS watches | All Rights Reserved</p>
     </footer>
 
     <!-- Theme Toggle Script -->
@@ -64,5 +64,8 @@
             localStorage.setItem("theme", isDark ? "dark" : "light");
         });
     </script>
+
+    <!-- Content-from-JSON Script -->
+    <script src="app.js" defer></script>
 </body>
 </html>

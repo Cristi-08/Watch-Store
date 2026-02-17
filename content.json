@@ -1,0 +1,147 @@
+{
+  "global": {
+    "text": {
+      "footerText": "&copy; 2025 TIMELESS watches | All Rights Reserved"
+    }
+  },
+  "pages": {
+    "index": {
+      "text": {
+        "heroTitle": "TIMELESS",
+        "heroSubtitle": "Discover luxury watches from top brands",
+        "featuredBrandsTitle": "Featured Brands",
+        "featuredWatchesTitle": "Featured Watches",
+        "brandRolexName": "Rolex",
+        "brandRolexCta": "View Details",
+        "brandPatekName": "Patek Philippe",
+        "brandPatekCta": "View Details",
+        "brandApName": "Audemars Piguet",
+        "brandApCta": "View Details",
+        "aboutTitle": "About Timeless",
+        "aboutP1": "At <b>Timeless</b>, we believe that true luxury never goes out of style. Founded with a deep appreciation for craftsmanship and heritage, <b>Timeless</b> is your premier destination for exceptional luxury watches that transcend trends and generations.",
+        "aboutP2": "We curate a distinguished selection of timepieces from the world’s most prestigious brands—each chosen for its design excellence, mechanical precision, and enduring value. From iconic classics to limited-edition treasures, our collection is crafted to meet the refined tastes of collectors and connoisseurs alike.",
+        "aboutP3": "What sets <b>Timeless</b> apart is more than our products—it's our commitment to providing a seamless, trustworthy shopping experience. With guaranteed authenticity, expert guidance, and secure worldwide shipping, we make the journey of owning a luxury watch as elegant as the timepiece itself.",
+        "aboutTagline": "<b>Because time is more than just hours and minutes. It’s a legacy.</b>"
+      },
+      "images": {
+        "brandRolexImg": {
+          "src": "images/rolex_2.jpg",
+          "alt": "Rolex Watch"
+        },
+        "brandPatekImg": {
+          "src": "images/patek_phillipe.jpg",
+          "alt": "Patek Philippe Watch"
+        },
+        "brandApImg": {
+          "src": "images/Audemars_Piguet.jpg",
+          "alt": "Audemars Piguet Watch"
+        },
+        "gallery1DefaultImg": {
+          "src": "images/omega.avif",
+          "alt": "Omega Speedmaster"
+        },
+        "gallery1HoverImg": {
+          "src": "images/omega_h.avif",
+          "alt": "Omega Speedmaster Hover"
+        },
+        "gallery2DefaultImg": {
+          "src": "images/ap.png",
+          "alt": "Audemars Piguet"
+        },
+        "gallery2HoverImg": {
+          "src": "images/ap_h.png",
+          "alt": "Audemars Piguet Hover"
+        },
+        "gallery3DefaultImg": {
+          "src": "images/patek_9.png",
+          "alt": "Patek Philippe"
+        },
+        "gallery3HoverImg": {
+          "src": "images/patek_10.png",
+          "alt": "Patek Philippe Hover"
+        },
+        "gallery4DefaultImg": {
+          "src": "images/rolex_7.png",
+          "alt": "Rolex"
+        },
+        "gallery4HoverImg": {
+          "src": "images/rolex_6.png",
+          "alt": "Rolex Hover"
+        }
+      }
+    },
+    "shop": {
+      "text": {
+        "shopIntroTitle": "Explore Our Collection",
+        "shopIntroSubtitle": "Discover a curated selection of iconic timepieces from the world’s finest watchmakers."
+      }
+    },
+    "about_us": {
+      "text": {
+        "aboutTitle": "About Timeless",
+        "aboutP1": "At <b>Timeless</b>, we believe that true luxury never goes out of style. Founded with a deep appreciation for craftsmanship and heritage, <b>Timeless</b> is your premier destination for exceptional luxury watches that transcend trends and generations.",
+        "aboutP2": "We curate a distinguished selection of timepieces from the world’s most prestigious brands—each chosen for its design excellence, mechanical precision, and enduring value. From iconic classics to limited-edition treasures, our collection is crafted to meet the refined tastes of collectors and connoisseurs alike.",
+        "aboutP3": "What sets <b>Timeless</b> apart is more than our products—it's our commitment to providing a seamless, trustworthy shopping experience. With guaranteed authenticity, expert guidance, and secure worldwide shipping, we make the journey of owning a luxury watch as elegant as the timepiece itself.",
+        "aboutTagline": "<b>Because time is more than just hours and minutes. It’s a legacy.</b>"
+      }
+    },
+    "contact_us": {
+      "text": {
+        "contactTitle": "Contact Us",
+        "contactSubtitle": "If you have any questions about our collection or need assistance, we’re here to help. Reach out to us using the form below or through our contact details.",
+        "contactSubmitBtn": "Send Message",
+        "contactEmail": "Email: support@timelesswatches.com",
+        "contactPhone": "Phone: +1 (800) 555-0199",
+        "contactInstagram": "Instagram: <a href=\"#\">@timelesswatches</a>"
+      }
+    },
+    "rolex": {
+      "text": {
+        "infoTitle": "INFO",
+        "infoP1": "<b>Rolex</b> is a prestigious Swiss watchmaker and one of the most recognized names in luxury timepieces. Founded in <b>1905</b> in London by Hans Wilsdorf and Alfred Davis as Wilsdorf and Davis, the company moved to Geneva in <b>1919</b>. Today, it remains privately owned by the Hans Wilsdorf Foundation, which reinvests profits into the brand and charitable initiatives.",
+        "infoP2": "Rolex is known for innovation and timeless design. It introduced several landmark models: the <b>Datejust (1945)</b>, the first watch with an automatic date change; the <b>Submariner (1953)</b>, a pioneering diving watch; and the <b>GMT-Master (1955)</b>, designed for pilots tracking multiple time zones. Other iconic models include the <b>Daytona</b> for motorsports, the <b>Explorer</b> for adventurers, the <b>Sky-Dweller</b>, with dual time and an annual calendar, and the newly introduced <b>Land-Dweller (2025)</b>, which features a high-frequency movement, integrated bracelet, and advanced escapement technology.",
+        "infoP3": "Each Rolex is hand-assembled with strict quality control. The company even operates its own gold foundry, ensuring material excellence. This meticulous craftsmanship and long-lasting value make Rolex a global symbol of reliability, luxury, and status.",
+        "popularModelsTitle": "Popular models",
+        "viewAllBtn": "View All"
+      },
+      "images": {
+        "bannerImg": {
+          "src": "images/rolex.jpg",
+          "alt": "Rolex Banner"
+        }
+      }
+    },
+    "patek": {
+      "text": {
+        "infoTitle": "INFO",
+        "infoP1": "<b>Patek Philippe</b> is one of the oldest and most prestigious Swiss watch manufacturers, renowned for its tradition of excellence, innovation, and craftsmanship. Founded in <b>1839</b> in Geneva by Antoni Patek and later joined by Adrien Philippe, the brand remains a symbol of horological artistry. Uniquely, Patek Philippe is still family-owned, currently run by the Stern family, ensuring independence and continuity in design and philosophy.",
+        "infoP2": "Patek Philippe is celebrated for its technical mastery and timeless elegance. It has introduced numerous milestones in watchmaking history, such as the first Swiss wristwatch (1868), the <b>Perpetual Calendar</b> mechanism, and the <b>Annual Calendar</b>. Signature models include the <b>Calatrava</b>, known for its understated refinement; the <b>Nautilus</b>, a luxury sports watch introduced in <b>1976</b>; the <b>Aquanaut</b>, a modern, youthful take on the Nautilus; and the <b>Grand Complications</b> series, which showcases the brand's mastery in perpetual calendars, minute repeaters, and split-second chronographs.",
+        "infoP3": "Each Patek Philippe timepiece is meticulously handcrafted and often takes several years to complete. The brand is known for its motto: <i>“You never actually own a Patek Philippe. You merely look after it for the next generation.”</i> This legacy, combined with strict quality control, mechanical complexity, and artistic finishing, makes Patek Philippe watches highly sought after and cherished across generations.",
+        "popularModelsTitle": "Popular models",
+        "viewAllBtn": "View All"
+      },
+      "images": {
+        "bannerImg": {
+          "src": "images/patek_banner.jpg",
+          "alt": "Patek Banner"
+        }
+      }
+    },
+    "ap": {
+      "text": {
+        "infoTitle": "INFO",
+        "infoP1": "<b>Audemars Piguet</b> is a distinguished Swiss watchmaker renowned for blending tradition with bold innovation. Founded in <b>1875</b> in Le Brassus, Switzerland, by Jules Louis Audemars and Edward Auguste Piguet, the company has remained family-owned, upholding its founding values of independence and horological excellence.",
+        "infoP2": "AP is best known for revolutionizing the luxury watch market with the introduction of the <b>Royal Oak</b> in <b>1972</b>, designed by Gérald Genta. It was the first high-end sports watch made of stainless steel, recognized for its distinctive octagonal bezel and integrated bracelet. The success of the Royal Oak led to further innovations such as the <b>Royal Oak Offshore</b>, a more robust and sportier variation introduced in 1993, and the <b>Royal Oak Concept</b> series, showcasing cutting-edge materials and futuristic designs.",
+        "infoP3": "Audemars Piguet is also respected for its expertise in high complications, including <b>tourbillons</b>, <b>minute repeaters</b>, and <b>perpetual calendars</b>. Each timepiece reflects a balance of technical mastery and avant-garde design. With a strong focus on in-house production and finishing, AP watches are crafted with meticulous care, combining bold aesthetics with mechanical brilliance. This dedication has secured Audemars Piguet a top position in the world of haute horlogerie.",
+        "popularModelsTitle": "Popular models",
+        "viewAllBtn": "View All"
+      },
+      "images": {
+        "bannerImg": {
+          "src": "images/ap_banner.jpg",
+          "alt": "AP Banner"
+        }
+      }
+    }
+  }
+}

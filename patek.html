@@ -25,35 +25,35 @@
 
     <div class="banner">
         <div class="img_container">
-            <img src="images/patek_banner.jpg" alt="Patek Banner">
+            <img id="bannerImg" src="images/patek_banner.jpg" alt="Patek Banner">
         </div>
     </div>
 
     <div class="info">
-      <h1>INFO</h1>
+      <h1 id="infoTitle">INFO</h1>
       
-      <p><b>Patek Philippe</b> is one of the oldest and most prestigious Swiss watch manufacturers, renowned 
+      <p id="infoP1"><b>Patek Philippe</b> is one of the oldest and most prestigious Swiss watch manufacturers, renowned 
       for its tradition of excellence, innovation, and craftsmanship. Founded in <b>1839</b> in Geneva by Antoni 
       Patek and later joined by Adrien Philippe, the brand remains a symbol of horological artistry. Uniquely, 
       Patek Philippe is still family-owned, currently run by the Stern family, ensuring independence and continuity 
       in design and philosophy.</p>
 
-      <p>Patek Philippe is celebrated for its technical mastery and timeless elegance. It has introduced numerous 
+      <p id="infoP2">Patek Philippe is celebrated for its technical mastery and timeless elegance. It has introduced numerous 
       milestones in watchmaking history, such as the first Swiss wristwatch (1868), the <b>Perpetual Calendar</b>
       mechanism, and the <b>Annual Calendar</b>. Signature models include the <b>Calatrava</b>, known for its 
       understated refinement; the <b>Nautilus</b>, a luxury sports watch introduced in <b>1976</b>; the <b>Aquanaut</b>, 
       a modern, youthful take on the Nautilus; and the <b>Grand Complications</b> series, which showcases the brand's 
       mastery in perpetual calendars, minute repeaters, and split-second chronographs.</p>
 
-      <p>Each Patek Philippe timepiece is meticulously handcrafted and often takes several years to complete. The brand 
+      <p id="infoP3">Each Patek Philippe timepiece is meticulously handcrafted and often takes several years to complete. The brand 
       is known for its motto: <i>“You never actually own a Patek Philippe. You merely look after it for the next generation.”
       </i> This legacy, combined with strict quality control, mechanical complexity, and artistic finishing, makes Patek 
       Philippe watches highly sought after and cherished across generations.</p>
     </div>
 
     <div class="shop-intro">
-        <h1>Popular models</h1>
-        <a href="shop.html" class="view-all-btn">View All</a>
+        <h1 id="popularModelsTitle">Popular models</h1>
+        <a id="viewAllBtn" href="shop.html" class="view-all-btn">View All</a>
     </div>
 
 
@@ -85,7 +85,7 @@
     </div>
     
     <footer>
-        <p>&copy; 2025 TIMELESS watches | All Rights Reserved</p>
+        <p id="footerText">&copy; 2025 TIMELESS watches | All Rights Reserved</p>
     </footer>
 
     <!-- Theme Toggle Script -->
@@ -106,5 +106,8 @@
             localStorage.setItem("theme", isDark ? "dark" : "light");
         });
     </script>
+
+    <!-- Content-from-JSON Script -->
+    <script src="app.js" defer></script>
 </body>
 </html>

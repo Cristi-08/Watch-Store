@@ -74,7 +74,8 @@
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img id="gallery1DefaultImg" src="images/omega.avif" alt="Omega Speedmaster" class="default-img">
-                    <img id="gallery1HoverImg" src="images/omega_h.avif" alt="Omega Speedmaster Hover" class="hover-img">
+                    <img id="gallery1HoverImg" src="images/omega_h.avif" alt="Omega Speedmaster Hover"
+                        class="hover-img">
                 </div>
                 <div class="gallery-item">
                     <img id="gallery2DefaultImg" src="images/ap.png" alt="Audemars Piguet" class="default-img">
@@ -114,6 +115,21 @@
 
             <em id="aboutTagline"><b>Because time is more than just hours and minutes. It’s a legacy.</b></em>
         </div>
+
+        <section class="notify-section">
+            <div class="notify-container">
+                <h2 id="notifyTitle">Stay in the Loop</h2>
+                <p id="notifySubtitle">Be the first to know about exclusive drops, limited editions, and special offers.
+                </p>
+                <form id="notifyForm" class="notify-form">
+                    <div class="notify-input-group">
+                        <input type="email" id="notifyEmail" placeholder="Enter your email address" required>
+                        <button type="submit" id="notifyBtn">Notify Me</button>
+                    </div>
+                </form>
+                <p id="notifyMessage" class="notify-message"></p>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -122,27 +138,47 @@
 
     <!-- Theme Toggle Script -->
     <script>
-    const toggleBtn = document.getElementById("theme-toggle");
-    const body = document.body;
+        const toggleBtn = document.getElementById("theme-toggle");
+        const body = document.body;
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-        body.classList.add("dark-theme");
-        toggleBtn.textContent = "☀️ Light";
-    }
+        // Load saved theme
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+            body.classList.add("dark-theme");
+            toggleBtn.textContent = "☀️ Light";
+        }
 
-    toggleBtn.addEventListener("click", () => {
-        body.classList.toggle("dark-theme");
-        const isDark = body.classList.contains("dark-theme");
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("dark-theme");
+            const isDark = body.classList.contains("dark-theme");
 
-        toggleBtn.textContent = isDark ? "☀️ Light" : "🌙 Dark";
-        localStorage.setItem("theme", isDark ? "dark" : "light");
+            toggleBtn.textContent = isDark ? "☀️ Light" : "🌙 Dark";
+            localStorage.setItem("theme", isDark ? "dark" : "light");
 
-        // Console output
-        console.log("theme changed");
-    });
-</script>
+            // Console output
+            console.log("theme changed");
+        });
+
+        // Notify form
+        const notifyForm = document.getElementById('notifyForm');
+        const notifyEmail = document.getElementById('notifyEmail');
+        const notifyMessage = document.getElementById('notifyMessage');
+
+        notifyEmail.addEventListener('input', () => {
+            notifyMessage.textContent = '';
+            notifyMessage.classList.remove('show');
+        });
+
+        notifyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = notifyEmail.value.trim();
+            if (email) {
+                notifyMessage.innerHTML = `Thank you! We'll keep <strong>${email}</strong> updated with exclusive drops and limited editions.`;
+                notifyMessage.classList.add('show');
+                notifyEmail.value = '';
+            }
+        });
+    </script>
 
     <!-- Content-from-JSON Script -->
     <script src="app.js" defer></script>

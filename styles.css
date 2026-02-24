@@ -10,7 +10,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    padding-top: 45px; /* space for fixed header */
+    padding-top: 45px;
+    /* space for fixed header */
 }
 
 /* Smooth transitions when theme changes */
@@ -55,7 +56,8 @@ header {
 .nav-bar ul {
     list-style-type: none;
     display: flex;
-    flex: 1 1 auto;        /* takes all available space */
+    flex: 1 1 auto;
+    /* takes all available space */
     padding: 0;
     margin: 0;
 }
@@ -73,7 +75,8 @@ header {
     text-decoration: none;
     padding: 15px 0;
     font-size: 16px;
-    font-weight: 400; /* normal by default */
+    font-weight: 400;
+    /* normal by default */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -87,7 +90,8 @@ header {
 
 /* Theme button: ~5% of nav width */
 .theme-toggle {
-    flex: 0 0 5%;          /* about 5% width */
+    flex: 0 0 5%;
+    /* about 5% width */
     max-width: 120px;
     min-width: 60px;
     margin-left: 10px;
@@ -275,6 +279,108 @@ em {
     font-size: 20px;
 }
 
+/* =================== NOTIFY SECTION =================== */
+
+.notify-section {
+    background-color: #111;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.notify-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.notify-container h2 {
+    font-size: 32px;
+    color: #c0af9f;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.notify-container>p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.notify-form {
+    margin-bottom: 20px;
+}
+
+.notify-input-group {
+    display: flex;
+    gap: 0;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.notify-input-group input {
+    flex: 1;
+    padding: 14px 24px;
+    border: 2px solid #c0af9f;
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+    font-size: 16px;
+    outline: none;
+    background: #1a1a1a;
+    color: #f4f4f4;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notify-input-group input::placeholder {
+    color: #888;
+}
+
+.notify-input-group input:focus {
+    border-color: #d4c4b0;
+    box-shadow: 0 0 0 3px rgba(192, 175, 159, 0.2);
+}
+
+.notify-input-group button {
+    padding: 14px 28px;
+    background-color: #c0af9f;
+    color: #111;
+    border: 2px solid #c0af9f;
+    border-radius: 0 50px 50px 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.notify-input-group button:hover {
+    background-color: #d4c4b0;
+    border-color: #d4c4b0;
+}
+
+.notify-input-group button:active {
+    transform: scale(0.97);
+}
+
+.notify-message {
+    color: #c0af9f;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    min-height: 1.5em;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.notify-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notify-message strong {
+    color: #fff;
+}
+
 /* Footer */
 footer {
     background-color: #c0af9f;
@@ -337,7 +443,7 @@ body.dark-theme .featured-watches h3 {
     color: #c0af9f;
 }
 
-body.dark-theme .introduction h1{
+body.dark-theme .introduction h1 {
     color: #c0af9f;
 }
 

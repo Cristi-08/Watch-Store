@@ -1,71 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Contact Us - Timeless</title>
   <link rel="stylesheet" href="contact_us.css">
 </head>
+
 <body>
-    <header class="menu">
-        <nav class="nav-bar">
-            <ul>
-                <li><a id="navHome" href="index.html">Home</a></li>
-                <li><a id="navShop" href="shop.html">Shop</a></li>
-                <li><a id="navAbout" href="about_us.html">About Us</a></li>
-                <li><a id="navContact" href="contact_us.html">Contact Us</a></li>
-            </ul>
+  <header class="menu">
+    <nav class="nav-bar">
+      <ul>
+        <li><a id="navHome" href="index.html">Home</a></li>
+        <li><a id="navShop" href="shop.html">Shop</a></li>
+        <li><a id="navAbout" href="about_us.html">About Us</a></li>
+        <li><a id="navContact" href="contact_us.html">Contact Us</a></li>
+      </ul>
 
-            <!-- Theme Toggle Button -->
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                🌙 Dark
-            </button>
-        </nav>
-    </header>
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        🌙 Dark
+      </button>
+    </nav>
+  </header>
 
-    <div class="wrapper">
-      <div class="contact-container">
-        <h1 id="contactTitle">Contact Us</h1>
-        <p id="contactSubtitle">If you have any questions about our collection or need assistance, we’re here to help. Reach out to us using the form below or through our contact details.</p>
-        
-        <form class="contact-form">
-          <input id="contactNameInput" type="text" placeholder="Your Name" required>
-          <input id="contactEmailInput" type="email" placeholder="Your Email" required>
-          <textarea id="contactMessageInput" placeholder="Your Message" required></textarea>
-          <button id="contactSubmitBtn" type="submit">Send Message</button>
-        </form>
+  <div class="wrapper">
+    <div class="contact-container">
+      <h1 id="contactTitle">Contact Us</h1>
+      <p id="contactSubtitle">If you have any questions about our collection or need assistance, we’re here to help.
+        Reach out to us using the form below or through our contact details.</p>
 
-        <div class="contact-info">
-          <p id="contactEmail">Email: support@timelesswatches.com</p>
-          <p id="contactPhone">Phone: +1 (800) 555-0199</p>
-          <p id="contactInstagram">Instagram: <a href="#">@timelesswatches</a></p>
-        </div>
+      <form class="contact-form">
+        <input id="contactNameInput" type="text" placeholder="Your Name" required>
+        <input id="contactEmailInput" type="email" placeholder="Your Email" required>
+        <textarea id="contactMessageInput" placeholder="Your Message" required></textarea>
+        <button id="contactSubmitBtn" type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <p id="contactEmail">Email: support@timelesswatches.com</p>
+        <p id="contactPhone">Phone: +1 (800) 555-0199</p>
+        <p id="contactInstagram">Instagram: <a href="#">@timelesswatches</a></p>
       </div>
     </div>
+  </div>
 
-    <footer>
-      <p id="footerText">&copy; 2025 TIMELESS watches | All Rights Reserved</p>
-    </footer>
+  <footer>
+    <p id="footerText">&copy; 2025 TIMELESS watches | All Rights Reserved</p>
+  </footer>
 
-    <!-- Theme Toggle Script -->
-    <script>
-        const toggleBtn = document.getElementById("theme-toggle");
-        const body = document.body;
+  <!-- Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
 
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "dark") {
-            body.classList.add("dark-theme");
-            toggleBtn.textContent = "☀️ Light";
-        }
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      body.classList.add("dark-theme");
+      toggleBtn.textContent = "☀️ Light";
+    }
 
-        toggleBtn.addEventListener("click", () => {
-            body.classList.toggle("dark-theme");
-            const isDark = body.classList.contains("dark-theme");
-            toggleBtn.textContent = isDark ? "☀️ Light" : "🌙 Dark";
-            localStorage.setItem("theme", isDark ? "dark" : "light");
-        });
-    </script>
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-theme");
+      const isDark = body.classList.contains("dark-theme");
+      toggleBtn.textContent = isDark ? "☀️ Light" : "🌙 Dark";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+  </script>
 
-    <!-- Content-from-JSON Script -->
-    <script src="app.js" defer></script>
+  <!-- Content-from-JSON Script -->
+  <script src="app.js" defer></script>
 </body>
+
 </html>

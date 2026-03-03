@@ -8,7 +8,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: #463527;
-  padding-top: 45px; /* space for fixed header */
+  padding-top: 45px;
+  /* space for fixed header */
 }
 
 /* Smooth transitions */
@@ -24,8 +25,8 @@ nav,
 .view-all-btn,
 footer {
   transition: background-color 0.3s ease,
-              color 0.3s ease,
-              border-color 0.3s ease;
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* Top strip behind nav */
@@ -98,8 +99,8 @@ nav a:hover {
   font-size: 14px;
   text-align: center;
   transition: background-color 0.3s ease,
-              color 0.3s ease,
-              border-color 0.3s ease;
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .theme-toggle:hover {
@@ -126,7 +127,8 @@ nav a:hover {
   font-family: 'Cormorant Garamond', serif;
   font-size: 25px;
   text-indent: 70px;
-  padding: 70px 700px 50px 100px; /* extra top padding to clear fixed header */
+  padding: 70px 700px 50px 100px;
+  /* extra top padding to clear fixed header */
   color: #463527;
   margin-bottom: 20px;
 }
@@ -166,8 +168,8 @@ nav a:hover {
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease,
-              color 0.3s ease,
-              border-color 0.3s ease;
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .view-all-btn:hover {
@@ -276,8 +278,9 @@ body.dark-theme .info h1 {
 }
 
 body.dark-theme .shop-intro {
-    background-color: #111;
+  background-color: #111;
 }
+
 /* Popular models section */
 body.dark-theme .shop-intro h1 {
   color: #c0af9f;
@@ -309,4 +312,79 @@ body.dark-theme .shop_watch-card {
 body.dark-theme footer {
   background-color: #c0af9f;
   color: #000;
+}
+
+/* ── Wishlist heart button ─────────────────────────────────────────────────── */
+
+.shop_watch-card {
+  position: relative;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #c0af9f;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+  z-index: 10;
+}
+
+.wishlist-btn:hover {
+  background-color: #fff;
+  transform: scale(1.15);
+}
+
+.wishlist-btn[data-wishlisted="true"] {
+  color: #c0534f;
+  border-color: #c0534f;
+}
+
+@keyframes wishlist-pop {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.4);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wishlist-btn--pop {
+  animation: wishlist-pop 0.35s ease;
+}
+
+/* Dark mode */
+body.dark-theme .wishlist-btn {
+  background: rgba(34, 34, 34, 0.9);
+  border-color: #c0af9f;
+  color: #c0af9f;
+}
+
+body.dark-theme .wishlist-btn:hover {
+  background-color: #333;
+}
+
+body.dark-theme .wishlist-btn[data-wishlisted="true"] {
+  color: #e07070;
+  border-color: #e07070;
 }

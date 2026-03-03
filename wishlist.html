@@ -2,21 +2,24 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Us - Timeless</title>
-  <link rel="stylesheet" href="contact_us.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist | Timeless Luxury Watches</title>
+  <link rel="stylesheet" href="wishlist.css" />
 </head>
 
 <body>
+
+  <!-- Navigation Bar -->
   <header class="menu">
-    <nav class="nav-bar">
+    <nav>
       <ul>
         <li><a id="navHome" href="index.html">Home</a></li>
         <li><a id="navShop" href="shop.html">Shop</a></li>
         <li><a id="navAbout" href="about_us.html">About Us</a></li>
         <li><a id="navContact" href="contact_us.html">Contact Us</a></li>
-        <li><a id="navWishlist" href="wishlist.html">Wishlist ♡</a></li>
         <li><a id="navConsult" href="consultation.html">Consultation</a></li>
+        <li><a id="navWishlist" href="wishlist.html">Wishlist ♡</a></li>
       </ul>
 
       <!-- Theme Toggle Button -->
@@ -26,26 +29,27 @@
     </nav>
   </header>
 
-  <div class="wrapper">
-    <div class="contact-container">
-      <h1 id="contactTitle">Contact Us</h1>
-      <p id="contactSubtitle">If you have any questions about our collection or need assistance, we’re here to help.
-        Reach out to us using the form below or through our contact details.</p>
+  <main>
+    <!-- Page Intro -->
+    <section class="wishlist-intro">
+      <h1>Your Wishlist</h1>
+      <p>Saved watches — <span id="wishlist-count">0</span> item(s)</p>
+    </section>
 
-      <form class="contact-form">
-        <input id="contactNameInput" type="text" placeholder="Your Name" required>
-        <input id="contactEmailInput" type="email" placeholder="Your Email" required>
-        <textarea id="contactMessageInput" placeholder="Your Message" required></textarea>
-        <button id="contactSubmitBtn" type="submit">Send Message</button>
-      </form>
-
-      <div class="contact-info">
-        <p id="contactEmail">Email: support@timelesswatches.com</p>
-        <p id="contactPhone">Phone: +1 (800) 555-0199</p>
-        <p id="contactInstagram">Instagram: <a href="#">@timelesswatches</a></p>
+    <!-- Grid / Empty state -->
+    <div class="wishlist-grid-wrapper">
+      <!-- Empty state (hidden when items exist) -->
+      <div id="wishlist-empty">
+        <span class="empty-icon">♡</span>
+        <h2>Nothing saved yet</h2>
+        <p>Browse the shop and tap the heart on any watch to save it here.</p>
+        <a href="shop.html">Go to Shop</a>
       </div>
+
+      <!-- Item grid (populated by wishlist.js) -->
+      <div id="wishlist-grid"></div>
     </div>
-  </div>
+  </main>
 
   <footer>
     <p id="footerText">&copy; 2025 TIMELESS watches | All Rights Reserved</p>
@@ -70,8 +74,11 @@
     });
   </script>
 
-  <!-- Content-from-JSON Script -->
+  <!-- Content Script -->
   <script src="app.js" defer></script>
+  <!-- Wishlist Script -->
+  <script src="wishlist.js" defer></script>
+
 </body>
 
 </html>

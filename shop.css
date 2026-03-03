@@ -9,7 +9,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
   color: #333;
-  padding-top: 45px; /* space for fixed header */
+  padding-top: 45px;
+  /* space for fixed header */
 }
 
 /* Smooth transitions */
@@ -22,8 +23,8 @@ nav,
 .shop_watch-card,
 footer {
   transition: background-color 0.3s ease,
-              color 0.3s ease,
-              border-color 0.3s ease;
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 /* Header strip */
@@ -96,8 +97,8 @@ nav a:hover {
   font-size: 14px;
   text-align: center;
   transition: background-color 0.3s ease,
-              color 0.3s ease,
-              border-color 0.3s ease;
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .theme-toggle:hover {
@@ -236,6 +237,83 @@ body.dark-theme .details {
 body.dark-theme footer {
   background-color: #c0af9f;
   color: #000;
+}
+
+/* ── Wishlist heart button ─────────────────────────────────────────────────── */
+
+/* Cards need relative positioning (also set by wishlist.js, this is the CSS side) */
+.shop_watch-card {
+  position: relative;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #c0af9f;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+  z-index: 10;
+}
+
+.wishlist-btn:hover {
+  background-color: #fff;
+  transform: scale(1.15);
+}
+
+.wishlist-btn[data-wishlisted="true"] {
+  color: #c0534f;
+  border-color: #c0534f;
+}
+
+/* Pop animation on toggle */
+@keyframes wishlist-pop {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.4);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.wishlist-btn--pop {
+  animation: wishlist-pop 0.35s ease;
+}
+
+/* Dark mode */
+body.dark-theme .wishlist-btn {
+  background: rgba(34, 34, 34, 0.9);
+  border-color: #c0af9f;
+  color: #c0af9f;
+}
+
+body.dark-theme .wishlist-btn:hover {
+  background-color: #333;
+}
+
+body.dark-theme .wishlist-btn[data-wishlisted="true"] {
+  color: #e07070;
+  border-color: #e07070;
 }
 
 /* Responsive tweak */

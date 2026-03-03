@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Consultation - Timeless</title>
+    <link rel="stylesheet" href="consultation.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="menu">
+        <nav class="nav-bar">
+            <ul>
+                <li><a id="navHome" href="index.html">Home</a></li>
+                <li><a id="navShop" href="shop.html">Shop</a></li>
+                <li><a id="navAbout" href="about_us.html">About Us</a></li>
+                <li><a id="navContact" href="contact_us.html">Contact Us</a></li>
+                <li><a id="navWishlist" href="wishlist.html">Wishlist ♡</a></li>
+                <li><a id="navConsult" href="consultation.html" class="active-nav">Consultation</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙 Dark</button>
+        </nav>
+    </header>
+
+    <main class="consult-main">
+
+        <!-- Hero -->
+        <section class="consult-hero">
+            <div class="hero-content">
+                <p class="hero-eyebrow">PERSONALIZED SERVICE</p>
+                <h1 class="hero-title">Find Your Perfect Timepiece</h1>
+                <p class="hero-subtitle">Answer a few questions and our experts will curate a bespoke selection just for
+                    you.</p>
+            </div>
+        </section>
+
+        <!-- Wizard Card -->
+        <section class="wizard-section">
+            <div class="wizard-card">
+
+                <!-- Progress Bar -->
+                <div class="progress-wrapper">
+                    <div class="progress-steps">
+                        <div class="step-dot active" data-step="1"><span>1</span></div>
+                        <div class="step-line"></div>
+                        <div class="step-dot" data-step="2"><span>2</span></div>
+                        <div class="step-line"></div>
+                        <div class="step-dot" data-step="3"><span>3</span></div>
+                        <div class="step-line"></div>
+                        <div class="step-dot" data-step="4"><span>4</span></div>
+                    </div>
+                    <div class="step-labels">
+                        <span>Occasion</span>
+                        <span>Budget</span>
+                        <span>Brand</span>
+                        <span>Details</span>
+                    </div>
+                </div>
+
+                <!-- ===== STEP 1: Occasion ===== -->
+                <div class="form-step active" id="step-1">
+                    <h2 class="step-title">What's the occasion?</h2>
+                    <p class="step-subtitle">Select the primary context for your new timepiece.</p>
+                    <div class="occasion-grid">
+                        <label class="occasion-card" for="occ-business">
+                            <input type="radio" name="occasion" id="occ-business" value="Business">
+                            <div class="occ-inner">
+                                <span class="occ-icon">💼</span>
+                                <span class="occ-label">Business</span>
+                                <span class="occ-desc">Boardroom elegance</span>
+                            </div>
+                        </label>
+                        <label class="occasion-card" for="occ-sport">
+                            <input type="radio" name="occasion" id="occ-sport" value="Sport">
+                            <div class="occ-inner">
+                                <span class="occ-icon">🏔️</span>
+                                <span class="occ-label">Sport & Adventure</span>
+                                <span class="occ-desc">Built for the active life</span>
+                            </div>
+                        </label>
+                        <label class="occasion-card" for="occ-evening">
+                            <input type="radio" name="occasion" id="occ-evening" value="Evening">
+                            <div class="occ-inner">
+                                <span class="occ-icon">🥂</span>
+                                <span class="occ-label">Evening & Gala</span>
+                                <span class="occ-desc">Dress watch sophistication</span>
+                            </div>
+                        </label>
+                        <label class="occasion-card" for="occ-gift">
+                            <input type="radio" name="occasion" id="occ-gift" value="Gift">
+                            <div class="occ-inner">
+                                <span class="occ-icon">🎁</span>
+                                <span class="occ-label">A Gift</span>
+                                <span class="occ-desc">For someone special</span>
+                            </div>
+                        </label>
+                    </div>
+                    <p class="validation-msg" id="val-1">Please select an occasion to continue.</p>
+                    <div class="step-nav">
+                        <div></div>
+                        <button class="btn-next" onclick="nextStep(1)">Next &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- ===== STEP 2: Budget ===== -->
+                <div class="form-step" id="step-2">
+                    <h2 class="step-title">What is your budget?</h2>
+                    <p class="step-subtitle">Drag the slider to set your ideal price range.</p>
+                    <div class="budget-display">
+                        <span class="budget-label">Up to</span>
+                        <span class="budget-amount" id="budgetDisplay">$25,000</span>
+                    </div>
+                    <div class="slider-wrapper">
+                        <input type="range" id="budgetSlider" min="1" max="7" value="3" class="luxury-slider">
+                        <div class="slider-ticks">
+                            <span>$5K</span>
+                            <span>$10K</span>
+                            <span>$25K</span>
+                            <span>$50K</span>
+                            <span>$100K</span>
+                            <span>$250K</span>
+                            <span>No Limit</span>
+                        </div>
+                    </div>
+                    <div class="step-nav">
+                        <button class="btn-back" onclick="prevStep(2)">&larr; Back</button>
+                        <button class="btn-next" onclick="nextStep(2)">Next &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- ===== STEP 3: Brand ===== -->
+                <div class="form-step" id="step-3">
+                    <h2 class="step-title">Any preferred brands?</h2>
+                    <p class="step-subtitle">Select all that appeal to you. We'll tailor our recommendation accordingly.
+                    </p>
+                    <div class="brand-grid">
+                        <label class="brand-card" for="brand-rolex">
+                            <input type="checkbox" name="brand" id="brand-rolex" value="Rolex">
+                            <div class="brand-inner">
+                                <span class="brand-name">ROLEX</span>
+                                <span class="brand-tagline">Crown of Watchmaking</span>
+                            </div>
+                        </label>
+                        <label class="brand-card" for="brand-patek">
+                            <input type="checkbox" name="brand" id="brand-patek" value="Patek Philippe">
+                            <div class="brand-inner">
+                                <span class="brand-name">PATEK PHILIPPE</span>
+                                <span class="brand-tagline">You never actually own a Patek Philippe</span>
+                            </div>
+                        </label>
+                        <label class="brand-card" for="brand-ap">
+                            <input type="checkbox" name="brand" id="brand-ap" value="Audemars Piguet">
+                            <div class="brand-inner">
+                                <span class="brand-name">AUDEMARS PIGUET</span>
+                                <span class="brand-tagline">To break the rules, you must first master them</span>
+                            </div>
+                        </label>
+                        <label class="brand-card" for="brand-omega">
+                            <input type="checkbox" name="brand" id="brand-omega" value="Omega">
+                            <div class="brand-inner">
+                                <span class="brand-name">OMEGA</span>
+                                <span class="brand-tagline">Chosen by explorers & astronauts</span>
+                            </div>
+                        </label>
+                        <label class="brand-card" for="brand-any">
+                            <input type="checkbox" name="brand" id="brand-any" value="Surprise Me">
+                            <div class="brand-inner">
+                                <span class="brand-name">✨ SURPRISE ME</span>
+                                <span class="brand-tagline">Let our curators decide</span>
+                            </div>
+                        </label>
+                    </div>
+                    <p class="validation-msg" id="val-3">Please select at least one brand preference.</p>
+                    <div class="step-nav">
+                        <button class="btn-back" onclick="prevStep(3)">&larr; Back</button>
+                        <button class="btn-next" onclick="nextStep(3)">Next &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- ===== STEP 4: Contact ===== -->
+                <div class="form-step" id="step-4">
+                    <h2 class="step-title">Almost there.</h2>
+                    <p class="step-subtitle">Tell us how to reach you, and our specialists will be in touch within 24
+                        hours.</p>
+                    <form class="contact-fields" id="consultForm" novalidate>
+                        <div class="field-group">
+                            <label for="consultName">Full Name</label>
+                            <input type="text" id="consultName" placeholder="e.g. Alexander Whitmore" required
+                                autocomplete="name">
+                        </div>
+                        <div class="field-group">
+                            <label for="consultEmail">Email Address</label>
+                            <input type="email" id="consultEmail" placeholder="e.g. alexander@example.com" required
+                                autocomplete="email">
+                        </div>
+                        <div class="field-group">
+                            <label for="consultPhone">Phone <span class="optional">(optional)</span></label>
+                            <input type="tel" id="consultPhone" placeholder="+1 (800) 000-0000" autocomplete="tel">
+                        </div>
+                        <div class="field-group">
+                            <label for="consultNotes">Additional Notes <span class="optional">(optional)</span></label>
+                            <textarea id="consultNotes"
+                                placeholder="Any specific references, dial preferences, materials..."
+                                rows="3"></textarea>
+                        </div>
+                        <p class="validation-msg" id="val-4">Please fill in your name and a valid email address.</p>
+                    </form>
+                    <div class="step-nav">
+                        <button class="btn-back" onclick="prevStep(4)">&larr; Back</button>
+                        <button class="btn-submit" id="submitBtn" onclick="submitForm()">Send My Request ✦</button>
+                    </div>
+                </div>
+
+                <!-- ===== RESULT CARD ===== -->
+                <div class="form-step result-card" id="step-result">
+                    <div class="result-checkmark">✦</div>
+                    <h2 class="result-title">Your Consultation is Confirmed</h2>
+                    <div class="result-summary" id="resultSummary"></div>
+                    <p class="result-note">Our specialists will review your preferences and reach out within <strong>24
+                            hours</strong> with a personally curated selection.</p>
+                    <a href="shop.html" class="btn-shop">Browse Collection While You Wait &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p id="footerText">&copy; 2025 TIMELESS watches | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // ============================================================
+        // THEME TOGGLE
+        // ============================================================
+        const toggleBtn = document.getElementById("theme-toggle");
+        const body = document.body;
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+            body.classList.add("dark-theme");
+            toggleBtn.textContent = "☀️ Light";
+        }
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("dark-theme");
+            const isDark = body.classList.contains("dark-theme");
+            toggleBtn.textContent = isDark ? "☀️ Light" : "🌙 Dark";
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+
+        // ============================================================
+        // BUDGET SLIDER
+        // ============================================================
+        const budgetValues = ["$5,000", "$10,000", "$25,000", "$50,000", "$100,000", "$250,000", "No Limit ✦"];
+        const slider = document.getElementById("budgetSlider");
+        const display = document.getElementById("budgetDisplay");
+
+        slider.addEventListener("input", () => {
+            display.textContent = budgetValues[slider.value - 1];
+            display.classList.add("pop");
+            setTimeout(() => display.classList.remove("pop"), 200);
+        });
+
+        // ============================================================
+        // WIZARD NAVIGATION
+        // ============================================================
+        let currentStep = 1;
+
+        function goToStep(n) {
+            document.querySelectorAll(".form-step").forEach(s => s.classList.remove("active", "exit-left"));
+            const steps = document.querySelectorAll(".form-step:not(.result-card)");
+
+            // Animate
+            document.getElementById("step-" + currentStep)?.classList.add("exit-left");
+
+            setTimeout(() => {
+                document.querySelectorAll(".form-step").forEach(s => s.classList.remove("active", "exit-left"));
+                const target = document.getElementById(n === "result" ? "step-result" : "step-" + n);
+                if (target) target.classList.add("active");
+                currentStep = n;
+                updateDots(n);
+            }, 200);
+        }
+
+        function updateDots(step) {
+            document.querySelectorAll(".step-dot").forEach(dot => {
+                const s = parseInt(dot.dataset.step);
+                dot.classList.remove("active", "done");
+                if (typeof step === "number") {
+                    if (s < step) dot.classList.add("done");
+                    if (s === step) dot.classList.add("active");
+                } else {
+                    dot.classList.add("done"); // result step = all done
+                }
+            });
+        }
+
+        function nextStep(from) {
+            // Validate
+            if (from === 1) {
+                const chosen = document.querySelector('input[name="occasion"]:checked');
+                if (!chosen) { showValidation("val-1"); return; }
+                hideValidation("val-1");
+            }
+            if (from === 3) {
+                const chosen = document.querySelectorAll('input[name="brand"]:checked');
+                if (chosen.length === 0) { showValidation("val-3"); return; }
+                hideValidation("val-3");
+            }
+            goToStep(from + 1);
+        }
+
+        function prevStep(from) {
+            goToStep(from - 1);
+        }
+
+        function showValidation(id) {
+            const el = document.getElementById(id);
+            el.classList.add("visible");
+            el.classList.add("shake");
+            setTimeout(() => el.classList.remove("shake"), 500);
+        }
+        function hideValidation(id) {
+            document.getElementById(id)?.classList.remove("visible");
+        }
+
+        // ============================================================
+        // SUBMIT
+        // ============================================================
+        function submitForm() {
+            const name = document.getElementById("consultName").value.trim();
+            const email = document.getElementById("consultEmail").value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!name || !emailRegex.test(email)) {
+                showValidation("val-4");
+                return;
+            }
+            hideValidation("val-4");
+
+            // Collect data
+            const occasion = document.querySelector('input[name="occasion"]:checked')?.value || "—";
+            const budget = budgetValues[slider.value - 1];
+            const brands = Array.from(document.querySelectorAll('input[name="brand"]:checked')).map(b => b.value);
+            const brandsText = brands.length ? brands.join(", ") : "Any";
+            const notes = document.getElementById("consultNotes").value.trim();
+
+            // Build result card
+            document.getElementById("resultSummary").innerHTML = `
+        <div class="result-row"><span class="result-icon">👤</span><div><strong>${name}</strong><br><small>${email}</small></div></div>
+        <div class="result-row"><span class="result-icon">🎯</span><div><strong>Occasion:</strong> ${occasion}</div></div>
+        <div class="result-row"><span class="result-icon">💰</span><div><strong>Budget:</strong> ${budget}</div></div>
+        <div class="result-row"><span class="result-icon">⌚</span><div><strong>Interested in:</strong> ${brandsText}</div></div>
+        ${notes ? `<div class="result-row"><span class="result-icon">📝</span><div><strong>Notes:</strong> ${notes}</div></div>` : ""}
+      `;
+
+            // Add spinning effect to button
+            const btn = document.getElementById("submitBtn");
+            btn.textContent = "Sending...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                goToStep("result");
+            }, 800);
+        }
+
+        // ============================================================
+        // Occasion card exclusivity for "Surprise Me" brand
+        // ============================================================
+        const surpriseCheckbox = document.getElementById("brand-any");
+        const otherBrandCheckboxes = document.querySelectorAll('input[name="brand"]:not(#brand-any)');
+        surpriseCheckbox.addEventListener("change", () => {
+            if (surpriseCheckbox.checked) {
+                otherBrandCheckboxes.forEach(cb => { cb.checked = false; cb.closest(".brand-card").classList.remove("selected"); });
+            }
+        });
+        otherBrandCheckboxes.forEach(cb => {
+            cb.addEventListener("change", () => {
+                if (cb.checked) {
+                    surpriseCheckbox.checked = false;
+                    document.getElementById("brand-any").closest(".brand-card").classList.remove("selected");
+                }
+            });
+        });
+
+        // Visual selected state for cards
+        document.querySelectorAll(".occasion-card input, .brand-card input").forEach(inp => {
+            inp.addEventListener("change", () => {
+                if (inp.type === "radio") {
+                    document.querySelectorAll(".occasion-card").forEach(c => c.classList.remove("selected"));
+                    inp.closest(".occasion-card").classList.toggle("selected", inp.checked);
+                } else {
+                    inp.closest(".brand-card").classList.toggle("selected", inp.checked);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
